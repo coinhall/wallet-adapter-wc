@@ -1,12 +1,15 @@
 import r2wc from "@r2wc/react-to-web-component";
 
-import { CustomComponent } from "./CustomComponent";
+import { UnifiedWalletWebComponent } from "./UnifiedWalletWebComponent";
 
 customElements.define(
-  "custom-component",
-  r2wc(CustomComponent, {
-    props: {
-      onWalletChanged: "function",
-    },
-  })
+  "unified-wallet-web-component",
+  r2wc(UnifiedWalletWebComponent)
 );
+
+export {
+  subscribeToWalletEvents,
+  invokeWalletAction,
+  type WalletEvent,
+  type WalletAction,
+} from "./UnifiedWalletWebComponent";

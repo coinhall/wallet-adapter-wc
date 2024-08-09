@@ -6,17 +6,15 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
     "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
     "jsx": "react-jsx",
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "outDir": "dist",
-    "declaration": true
+    "declaration": true,
+    "emitDeclarationOnly": true
   },
   "include": ["src"]
 }
