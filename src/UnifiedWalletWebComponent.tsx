@@ -145,7 +145,7 @@ const Button = () => {
       }
     });
     return () => unsubscribe();
-  }, []);
+  }, [setShowModal]);
 
   return <UnifiedWalletButton />;
 };

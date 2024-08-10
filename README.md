@@ -49,5 +49,6 @@ export default Wallet;
 
 ### Further Improvements
 
-- Fix linting issues (eg. running `pnpm lint`)
-- Handle for more events and actions where necessary
+- Add more attributes that the underlying package accepts
+- Handle for more events and actions
+- Add examples for other frameworks
