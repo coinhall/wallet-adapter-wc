@@ -84,7 +84,7 @@ function emitWalletEvent(event: WalletEvent) {
   );
 }
 
-export const UnifiedWalletWebComponent = () => (
+export const WalletAdapter = () => (
   <UnifiedWalletProvider
     wallets={[]}
     config={{
@@ -103,11 +103,11 @@ export const UnifiedWalletWebComponent = () => (
       lang: "en",
     }}
   >
-    <Button />
+    <WalletButton />
   </UnifiedWalletProvider>
 );
 
-const Button = () => {
+const WalletButton = () => {
   const { connecting, wallet, publicKey } = useUnifiedWallet();
   const { setShowModal } = useUnifiedWalletContext();
 

@@ -36,7 +36,7 @@ const Wallet: Component = () => {
     onCleanup(() => unsubscribe());
 
     // 3) Import the web component after subscribing to wallet events
-    import("@coinhall/wallet-adapter-wc");
+    import("@coinhall/wallet-adapter-wc/webcomponent");
   });
 
   return <unified-wallet-web-component />;

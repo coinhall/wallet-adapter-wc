@@ -8,10 +8,16 @@ export default defineConfig(() => ({
   plugins: [react(), typescript(), cssInjectedByJsPlugin()],
   build: {
     lib: {
-      formats: ["es", "umd"],
-      entry: path.resolve(__dirname, "src/index.ts"),
+      formats: ["es"],
+      entry: [
+        path.resolve(__dirname, "src/index.ts"),
+        path.resolve(__dirname, "src/webcomponent.ts"),
+      ],
       name: "index",
-      fileName: (format) => `index.${format}.js`,
+      fileName: (format, entryName) =>
+        `${
+          entryName.includes("webcomponent") ? "webcomponent" : "index"
+        }.${format}.js`,
     },
     rollupOptions: {
       external: ["react"],
